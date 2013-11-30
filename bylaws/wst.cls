@@ -2,14 +2,13 @@
 \LoadClass[12pt]{article}
 
 \RequirePackage[letterpaper,margin=1in]{geometry}
-\RequirePackage{outlines}
 \RequirePackage{enumitem}
-
-\renewcommand{\thesection}{\Roman{section}.}
+\RequirePackage{outlines}
 \setenumerate[1]{label=\Alph*.}
 \setenumerate[2]{label=\roman*.}
 \setenumerate[3]{label=\alph*.}
 
+\renewcommand{\thesection}{\Roman{section}.}
 %
 % vim: syntax=tex
 %
