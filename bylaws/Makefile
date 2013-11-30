@@ -1,9 +1,13 @@
-P = bylaws
+C = doc
+
+ALL_SRCS := $(wildcard *.tex)
+SRCS := $(filter-out $(C).tex, $(ALL_SRCS)) 
 
 all: clobber $(P).pdf clean
 
 $(P).pdf:
-	xelatex $(P).tex
+	xelatex $(SRCS)
+	xelatex $(C).tex
 
 clean:
 	rm -f *.aux
@@ -14,4 +18,4 @@ clean:
 	rm -f *-eps-converted-to.pdf
 
 clobber: clean
-	rm -f $(P).pdf
+	rm -f $(ALL_SRCS).pdf
